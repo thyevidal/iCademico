@@ -1,0 +1,95 @@
+#sobre{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* ============ CAIXA ESQUERDA =========== */
+
+.caixa-esquerda-sobre{
+    width: 50%;
+    position: relative;
+}
+
+.titulo-sobre{
+    position: relative;
+    top: 136px;
+    left: 121px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #164194;
+}
+
+.texto-sobre{
+    position: relative;
+    top: 155px;
+    left: 121px;
+    font-size: 28px;
+    font-weight: 300;
+    margin-right: 100px;
+    text-align: justify;
+
+    
+}
+
+.pergunta-visitante{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    left: 121px;
+    top: 190px;
+}
+
+.container-voto .voting{
+    position: relative;
+    left: 180px;
+    top: 160px;
+}
+
+.input{
+    position: relative;
+    border: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    right: 110px;
+    top: 19px;
+    width: 60px;
+}
+
+.botao-like{
+    position: relative;
+    height: 54px;
+    border-radius: 15px;
+    border: none;
+    top: 50px;
+    right: 60px;
+}
+
+.img-botao-like{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+/* tirar outline do click */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* ========= COUNTEINER DIRETA =========== */
+
+.caixa-direita-sobre{
+    width: 50%;
+    position: relative;
+}
+
+
+.ilustracao-sobre{
+    position: relative;
+    top: 156px;
+    
+}

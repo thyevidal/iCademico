@@ -1,28 +1,245 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog do Thye</title>
+    <link rel="stylesheet" href="../static/css/_stylegeral.css">
+    <link rel="stylesheet" href="../static/css/_menu.css">
+    <link rel="stylesheet" href="../static/css/_inicio.css">
+    <link rel="stylesheet" href="../static/css/_sobre.css">
+    <link rel="stylesheet" href="../static/css/_blog.css">
+    <link rel="stylesheet" href="../static/css/faq.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../static/css/footer.css">
+
+    
+    <!-- Light: 300    Medium: 500   Bold: 700 -->
+    <!-- font-family: 'Montserrat', sans-serif; -->
+
+    <title>iCadêmico</title>
 </head>
 <body>
-    <h1>BEM VINDO AO BLOG DO THYE</h1>
-    <h2>Aqui é onde conto um pouco sobre minha vida</h2>
-    <p><a href="http://127.0.0.1:8000/">voltar</a></p>
-  
-    <section>
-        {% for post in post %}
-        <div class="post">
-            <h1 class="titulo-post"><a href="#">{{ post.titulo }}</a></h1>
-            <p class="preview">{{ post.texte|linebreaks }}</p>
-            <p class="dados do post">Publicado em: {{ post.publidata }}</p>
+    <!-- ======== HEADER ========= -->
+    <header>
+        <!--======= MENU DESKTOP   ==========-->
+        <nav id="menudesktop">
+            <ul>
+                <li class="textomenu">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======= PÁGINA INICIAL ========= -->
+    <section id="inicio">
+        <div class="caixaesquerda">
+            <div class="logoinicio">
+                <img class="logocolorida" src="../../media/imagens/logocolorida.svg" alt="Logo Colorida">
+                <h3 class="slogan">
+                    {{ frase.frase }}
+                </h3>
+            </div>
+            <div class="redessociais">
+                <a class="logo-rede"href="#"><img  src="../../media/imagens/icon-face.svg" alt="Logo do Facebook"></a>
+                <a class="logo-rede"href="#"><img  src="../../media/imagens/icon-insta.svg" alt="Logo do Instagram"></a>
+                <a class="logo-rede" href="#"><img  src="../../media/imagens/icon-email.svg" alt="Logo do Email"></a>
+            </div>
         </div>
-        {% endfor %}
+        <div class="caixadireita">
+            <img class="mulher-bg" src="../../media/imagens/Group 1.png" alt="Mulher Com Tablet">
+            <!-- <img class="mulher-bg-mobile" src="../../media/imagens/mobile/mulher-bg.png" alt=""> -->
+            <!-- olha essa imagem do mobile, ta bugando o sobre. ==============================================================================-->
+
+
+        </div>
     </section>
+    <!-- ========= SOBRE ========== -->
+    <section id="sobre">
+        <!-- ======= CAIXA ESQUERDA DO SOBRE ======== -->
+        <div class="caixa-esquerda-sobre">
+            <h1 class="titulo-sobre">{{ sobre.titulo }}</h1>
+            <p class="texto-sobre">
+                {{ sobre.texto }}
+            <h3 class="pergunta-visitante">GOSTOU DE NOS CONHECER?</h3>
+            <!-- ==== BOTÃO LIKE ===== -->
+            <div class="container-voto">
+                <div class="voting">
+                    <button class="botao-like" id="likebtn" onclick="clickBtn.clickActive()">
+                        <input class="img-botao-like" type="image" src="../../media/imagens/like-coracao.svg">   
+                    </button>
+                    <input type="number" class="input" data-input value="13" readonly>
+                </div>
+            </div>
+        </div>
+        <!-- ====== CAIXA DIREITA DO SOBRE ======== -->
+        <div class="caixa-direita-sobre">
+            <img class="ilustracao-sobre" src="../../media/imagens/ilustracao-sobre.svg" alt="Sobre">
+        </div>
+    </section>
+    <!-- ========= BLOG ========== -->
+    <section id="blog">
+        <!-- ========= POSTAGENS MAIS CURTIDAS ======== -->
+        <main id="postagens-blog">
+            <h1 class="titulo-blog">Blog
+                <div class="traco-titulo-blog"></div>
+            </h1>
+            <h2 class="subtitulo-blog">POSTAGENS MAIS CURTIDAS
+                <div class="traco-subtitulo-blog"></div>
+            </h2>
+
+            <!-- Swiper -->
+            <div class="container-swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        {% for post in post %}
+                        <div class="swiper-slide">{{ post.titulo }}
+                            {% if post.imagem == '' %}
+                            <img class="foto-sociedade" src="../../media/imagens/postagens/post-1.png" alt="Xícara de café com agenda e celular">
+                            {% else %}
+                            <img class="foto-sociedade" src="{{ post.imagem.url }}" alt="Xícara de café com agenda e celular">
+                            {% endif %}
+                            <div class="contaier-legenda-swiper">
+                                <div class="container-generico">
+                                    <button class="botao-like-blog" id="likebtn" onclick="clickBtn.clickActive1()">
+                                        <input class="img-botao-like-blog" type="image" src="../../media/imagens/like-coracao-branco.svg">   
+                                    </button>
+                                    <input type="number" class="input1" data-input1 value="13" readonly>
+                                </div>
+                                <div class="ver-mais-generico">
+                                    <a href="#"><p>VER MAIS</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="button-next">
+                    <img src="../../media/imagens/buttons/arrow-next.svg" alt="">
+                </div>
+                <div class="button-prev">
+                    <img src="../../media/imagens/buttons/arrow-prev.svg">
+                </div>
+            </div>
+        </main>
+        <!-- ====== AUTORES MAIS CURTIDOS ====== -->
+        <div id="autores-blog">
+            <h2 class="subtitulo-blog">AUTORES MAIS PROCURADOS<div class="traco-subtitulo-blog"></div></h2>
+
+        <!-- AQUI VAI PRECISAR SER APENAS UM QUE SE REPETE, FALA COM NOIS QQR COISA ♥ ============================ -->
+
+            <div class="container-perfil-autores">
+                <div class="perfil-autores">
+                    <div class="perfil-autor01">
+                        <img src="../../media/imagens/autores/user.svg" alt="">
+                        <h3>{{ autore.nome }}</h3>
+                        <div class="botao-biografia">
+                            <a href="#"><h3>Ler biografia</h3></a>
+                            <div class="visualizacoes">
+                                <div class="busca">
+                                    {{ autore.artigos }}
+                                </div>
+                                <div class="curtidas">
+                                    {{ autore.likes }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="perfil-autor02">
+                    <img src="../../media/imagens/autores/user.svg" alt="">
+                    <h3>{{ autore.nome }}</h3>
+                    <div class="botao-biografia">
+                        <a href="#"><h3>Ler biografia</h3></a>
+                        <div class="visualizacoes">
+                            <div class="busca">
+                                {{ autore.artigos }}
+                            </div>
+                            <div class="curtidas">
+                                {{ autore.likes }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="perfil-autor03">
+                    <img src="../../media/imagens/autores/user.svg" alt="">
+                    <h3>{{ autore.nome }}</h3>
+                    <div class="botao-biografia">
+                        <a href="#"><h3>Ler biografia</h3></a>
+                        <div class="visualizacoes">
+                            <div class="busca">
+                                {{ autore.artigos }}
+                            </div>
+                            <div class="curtidas">
+                                {{ autore.likes }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ========= PERGUNTAS FREQUENTES =========== -->
+    <section id="faq">
+        <div class="container-faq">
+            <h1><span>Perguntas</span> Frequentes</h1>
+            <!-- ACORDEÃO -->
+            <section class="acordeao">
+                <div class="container">
+                    <div class="accordion">
+
+                        {% for faq in faq %}
+                        <div class="accordion-item" id="question1">
+                            <a class="accordion-link" href="#question1">
+                                <h2>{{ faq.pergunta }}</h2>
+                                <ion-icon class="add" name="toggle-outline"></ion-icon>
+                                <ion-icon class="remove" name="toggle"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <h3>{{ faq.resposta }}</h3>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="bg-faq">
+            <img src="../../media/imagens/bg-faq.svg" alt="">
+        </div>
+    </section>
+    <!-- =========== FOOTER =============== -->
+    <footer>
+        <p>iCadêmico &copy; EJECT - 2021.1 </p>
+
+    </footer>
+    
+
+
+    <!-- ====================== SCRIPTS ===================== -->
+
+    <!-- ====== ION ICONS ====== -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- ==== BOTÃO TOPO ==== -->
+    <a id="botao-topo" href="#"><img src="../../media/imagens/botao-topo.svg" alt="Botão para ir ao topo"></a>
+    <!-- ======= SCRIPT SLIDER ======= -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- ======= SCRIPT SLIDER BLOG ======= -->
+    <script type="text/javascript" src="../static/js/slider_blog.js"></script>
+    <!-- ========== SCRIPT BOTÃO DE LIKE SOBRE ========= -->
+    <script type="text/javascript" src="../static/js/botao_like_sobre.js"></script>
+
 </body>
 </html>

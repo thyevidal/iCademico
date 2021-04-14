@@ -1,0 +1,70 @@
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 999;
+}
+
+.active-header{
+    background: white;
+}
+
+
+#menudesktop{
+    width: 100%;
+    height: 78px;
+    display: flex;
+}
+
+.textomenu{
+    position: absolute;
+    left: 175px;
+    top: 31px;
+    list-style: none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+}
+.textomenu ul{
+    display: flex;
+    
+}
+
+.textomenu a{
+    color: #80A1D4;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.textomenu a:hover{
+    color: #164194;
+}
+
+.textomenu a::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    background: #0095DB;
+    top: 90%;
+    left: 20px;
+    width: 0;
+    transition: 0.5s ease;
+    margin-top: 2px;
+}
+
+.textomenu a:hover::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background: #0095DB;
+    top: 90%;
+    left: 20px;
+    width: 50%;
+    margin-top: 2px;
+}

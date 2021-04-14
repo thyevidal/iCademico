@@ -1,0 +1,50 @@
+*, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7F4EA;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 1.6rem;
+}
+
+img, svg{
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+#botao-topo{
+    position: fixed;
+    right: 21px;
+    bottom: 10px;
+}
+
+@media(min-width: 801px){
+    .mulher-bg-mobile{
+        display: none;
+    }
+}
+
+@media(max-width: 600px) and (max-width: 800px){
+    .mulher-bg{
+        display: none;
+    }
+
+}
+
+
+
+
