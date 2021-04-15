@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css-blog/blog.css' %}">
+    <title>{{ chave.titulo }}</title>
+</head>
+<body>
+    <!-- ====== CABEÇALHO ======== -->
+    <header>
+        <div class="container-header">
+            <h1>{{ chave.titulo }}</h1>
+            {% if chave.imagem == '' %}
+            <img src="{% static 'imagens/pagblog/user-circle.svg' %}" alt="{{ chave.autor }}">
+            {% else %}
+            <img src="{{ chave.imagem.url }}" alt="">
+            {% endif %}
+            <div class="container-autor-data">
+                <p>por <span>{{ chave.autor }}</span></p>
+                <p>{{ chave.publidata }}</p>
+            </div>
+        </div>
+
+    </header>
+    <!-- ======== TEXTO ======== -->
+    <main>
+        <p class="conteudo-1">
+            {{ chave.texto }}
+        </p>
+        <h2 class="sub1">Lorem Ipsum</h2>
+        <img src="imagens/pagblog/foto-texto.svg" alt="">
+        <h2 class="sub2">Lorem Ipsum</h2>
+        <p class="conteudo-2">
+            Is simply dummy text of the printing and typesetting industry. Lorem Ipsu<br><br>Standard dummy text ever since tunknown printer. 
+        </p>
+
+        <div class="info-autor">
+            {% if chave.imagem == '' %}
+            <img src="{% static 'imagens/pagblog/user-circle.svg' %}" alt="{{ chave.autor }}">
+            {% else %}
+            <img src="{{ chave.imagem.url }}" alt="">
+            {% endif %}
+            <div class="container-autor-data">
+                <p>por <span>{{ chave.autor }}</span></p>
+                <p>{{ chave.criacaodata }}</p>
+            </div>
+            <p class="desc">{{ chave.biografia }}</p>
+
+            <div class="redes">
+                <a href="#"><img class="face" src="{% static 'imagens/pagblog/icon-face.svg' %}" alt=""></a>
+                <a  href="#"><img class="insta" src="{% static 'imagens/pagblog/icon-insta.svg' %}" alt=""></a>
+                <a href="#"><img class="email" src="{% static 'imagens/pagblog/icon-email.svg' %}" alt=""></a>
+                <a href="#"><img class="linkedin" src="{% static 'imagens/pagblog/icon-link.svg' %}" alt=""></a>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!--  ============= ANÚNCIOS ========== -->
+    <aside>
+        <div class="vem-ja">
+            <img src="{% static 'imagens/pagblog/anuncio-1.svg' %}" alt="">
+        </div>
+
+        <div class="anuncio">
+            <img src="{% static 'imagens/pagblog/anuncio-2.svg' %}" alt="">
+        </div>
+        
+    </aside>
+    <!-- =========== FOOTER ========= -->
+    <footer>
+        <p>iCadêmico &copy; EJECT - 2021.1 </p>
+    </footer>
+    
+</body>
+</html>

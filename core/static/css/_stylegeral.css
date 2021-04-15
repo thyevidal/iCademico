@@ -1,0 +1,43 @@
+*, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7F4EA;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+img, svg{
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+#botao-topo{
+    position: fixed;
+    right: 21px;
+    bottom: 10px;
+}
+
+@media (max-width: 801px){
+    #botao-topo{
+        display: none;
+    }
+}
+
+
+
+
+
+
+

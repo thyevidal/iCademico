@@ -1,0 +1,328 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+
+}
+
+img, svg{
+    width: 100%;
+    display: block;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7F4EA;
+    overflow-x: hidden;
+    font-size: 16px;
+    color: #164194;
+
+}
+
+header{
+    border-bottom: 3px solid #80A1D4;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    
+    background-color:#FAFAFA;
+    
+    position: absolute;
+    width: 886px;
+    height: 256px;
+    left: 50px;
+    top: 49px;
+}
+
+/* ========= CABEÇALHO =========== */
+
+.container-header{
+    position: absolute;
+    width: 844px;
+    height: 198px;
+    left: 24px;
+    top: 24px;
+}
+
+
+
+.container-header h1{
+
+    position: absolute;
+
+    width: 844px;
+    height: 110px;
+
+
+    letter-spacing: 3px;
+
+
+    font-weight: 700;
+    font-size: 48px;
+    text-align: justify;
+
+    
+}
+
+
+.container-header img{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 120px;
+}
+
+.container-autor-data{
+    position: absolute;
+    width: 332px;
+    height: 58px;
+    left: 106px;
+    top: 120px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: justify;
+}
+
+.container-autor-data p {
+    color: #80A1D4;
+
+}
+
+.container-autor-data p span{
+    color: #164194;
+
+}
+
+/* ============= TEXTO ============ */
+main{
+    background-color:#FAFAFA;
+
+    position: absolute;
+    width: 886px;
+    height: 1075px;
+    left: 50px;
+    top: 305px;
+}
+
+main .conteudo-1{
+
+
+    color: #242424;
+
+    letter-spacing: 3px;
+
+    position: absolute;
+    width: 735px;
+    height: fit-content;
+    left: 107px;
+    top: 21.57px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 34px;
+
+    
+}
+
+main .sub1 {
+    position: absolute;
+    width: 255px;
+    height: 44px;
+    left: 365px;
+    top: 360px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+
+
+    text-align: center;
+}
+
+main img{
+    position: absolute;
+    width: 784px;
+    height: 276px;
+    left: 57px;
+    top: 410px;
+}
+
+main .sub2 {
+    position: absolute;
+    width: 255px;
+    height: 44px;
+    left: 365px;
+    top: 690px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+
+
+    text-align: center;
+}
+
+main .conteudo-2{
+    position: absolute;
+    width: 795px;
+    height: 132px;
+    left: 102px;
+    top: 750px;
+
+
+    font-weight: 300;
+    font-size: 28px;
+
+
+    color: #242424;
+}
+
+.info-autor{
+    position: absolute;
+    width: 792px;
+    height: 144px;
+    left: 102px;
+    top: 900px;
+}
+
+.info-autor img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    width: 120px;
+    height: 120px;
+}
+
+.info-autor .container-autor-data{
+    top: 0;
+    left: 140px;
+}
+
+.info-autor .desc{
+    position: absolute;
+    width: 659px;
+    height: 57px;
+    top: 65px;
+    left: 140px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+
+
+    color: #242424;
+}
+
+.info-autor .redes{
+    position: absolute;
+    width: 171px;
+    height: 35px;
+    top: 130px;
+    left: 140px;
+}
+
+.info-autor .redes .face{
+    position: absolute;
+    width: 30px;
+    height: 35px;
+
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.info-autor .redes .insta{
+    width: 30px;
+    height: 35px;
+    left: 35px;
+}
+
+.info-autor .redes .email{
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    left: 70px;
+}
+
+.info-autor .redes .linkedin{
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    left: 105px;
+
+}
+
+
+
+/* =========== ANÚNCIOS DA DIREITA =========== */
+aside .vem-ja{
+    position: absolute;
+    width: 400px;
+    height: 835px;
+    left: 971px;
+    top: 49px;
+
+    background-color: #E4C157;
+}
+
+aside .vem-ja img{
+    
+    position: absolute;
+    top: 110px
+}
+
+aside .anuncio{
+    position: absolute;
+    width: 400px;
+    height: 467px;
+    left: 971px;
+    top: 913px;
+
+    background: #C1C1C1
+}
+
+aside .anuncio img{
+    position: absolute;
+    width: 371px;
+    height: 367px;
+    top: 63px;
+
+}
+
+/* ======= FOOTER ======= */
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 104px;
+    left: 0px;
+    top: 1450px;
+    
+    background: #164194;
+}
+
+footer p{
+    position: absolute;
+    width: fit-content;
+
+    top: 40%;
+    left: 38%;
+
+
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+
+    text-align: center;
+
+
+    color: #FAFAFA;
+}
