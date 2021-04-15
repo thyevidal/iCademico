@@ -1,6 +1,6 @@
-# iCademico
+# iCademico 
  
-Site institucional criado para o segundo desafio trainee da EJECT do processo seletivo de 2021.1
+### Site institucional criado para o segundo desafio trainee da EJECT do processo seletivo de 2021.1
 
 Membros responsáveis pelo projeto:
 	Brenda Carvelho - Ux/Ui

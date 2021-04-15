@@ -6,9 +6,9 @@ from django.db.models import Max
 # Create your views here.
 def index(request):
     context = {
-        'post' : Blog.objects.order_by('likes'),
+        'post' : Blog.objects.order_by('-likes'),
         'sobre': Sobre.objects.last(),
-        'faq': Faq.objects.all(),
+        'faq': Faq.objects.order_by('-publidata')[:3],
         'autore': Autore.objects.all()[:3],
         'frase': Frase.objects.last(),
     }
@@ -18,5 +18,5 @@ def blog(request, id_blog):
     post = {
         'chave': get_object_or_404(Blog, pk=id_blog),
     }
-    return render(request, 'blog.html', post  )
+    return render(request, 'blog.html', post)
 

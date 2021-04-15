@@ -25,12 +25,19 @@ class Sobre(models.Model):
     texto = models.TextField('Texto')
     likes = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.titulo
+
 class Frase(models.Model):
     frase = models.CharField('Frase', max_length=200)
 
 class Faq(models.Model):
     pergunta = models.CharField('Pergunta', max_length=200)
     resposta = models.TextField('Resposta')
+    publidata = models.DateTimeField(default =timezone.now)
+
+    def __str__(self):
+        return self.pergunta
 
 class Autore(models.Model):
     nome = models.CharField('Nome', max_length=200)
