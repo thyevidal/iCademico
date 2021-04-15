@@ -26,8 +26,10 @@ Tecnologias:
 	Python 3
 	Django 3.2
 
-Para rodar a aplicação, você deve ter o Python e Django atualizado, para isso siga os tutoriais em: https://docs.djangoproject.com/pt-br/3.0/intro/install/
-Após a intalação, clone o diretório do github (https://github.com/Hugocorreaa/iCademico.git), abra uma janela de comandos na pasta com o arquivo manage.py e digite o seguinte comando:
+Para rodar a aplicação, você deve ter o Python e Django atualizado, para isso siga os tutoriais em: 
+	Para Python: https://tutorial.djangogirls.org/pt/python_installation/
+	Para Django: https://tutorial.djangogirls.org/pt/django_installation/
+Após a intalação, clone o diretório do github (https://github.com/thyevidal/iCademico.git), abra uma janela de comandos na pasta com o arquivo manage.py, inicialize a venv seguindo os passos do tutorial (https://tutorial.djangogirls.org/pt/django_start_project/) e digite os seguintes comando:
 	python manage.py runserver
 Feito isso o servidor local deve ter sido inicializado, abra o seu navegador e cole: <http://127.0.0.1:8000/>. Este é o endereço padrão do projeto.
 	
