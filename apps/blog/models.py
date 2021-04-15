@@ -23,6 +23,7 @@ class Blog(models.Model):
 class Sobre(models.Model):
     titulo = models.CharField('Titulo', max_length=200)
     texto = models.TextField('Texto')
+    likes = models.IntegerField(default=0)
 
 class Frase(models.Model):
     frase = models.CharField('Frase', max_length=200)

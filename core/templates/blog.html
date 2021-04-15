@@ -14,12 +14,12 @@
         <div class="container-header">
             <h1>{{ chave.titulo }}</h1>
             {% if chave.imagem == '' %}
-            <img src="{% static 'imagens/pagblog/user-circle.svg' %}" alt="{{ chave.autor }}">
+            <img src="{% static 'imagens/pagblog/user-circle.svg' %}" alt="">
             {% else %}
-            <img src="{{ chave.imagem.url }}" alt="">
+            <img src="{{ chave.imagem.url }}">
             {% endif %}
             <div class="container-autor-data">
-                <p>por <span>{{ chave.autor }}</span></p>
+                <p>Por: <span>{{ chave.autor }}</span></p>
                 <p>{{ chave.publidata }}</p>
             </div>
         </div>
@@ -30,24 +30,31 @@
         <p class="conteudo-1">
             {{ chave.texto }}
         </p>
+        <!--
         <h2 class="sub1">Lorem Ipsum</h2>
-        <img src="imagens/pagblog/foto-texto.svg" alt="">
+        -->
+        {% if chave.imagem == '' %}
+        <img src="{% static 'imagens/pagblog/foto-texto.svg' %}" alt="">
+        {% else %}
+        <img src="{{ chave.imagem.url }}" alt="">
+        {% endif %}
+        <!--
         <h2 class="sub2">Lorem Ipsum</h2>
         <p class="conteudo-2">
             Is simply dummy text of the printing and typesetting industry. Lorem Ipsu<br><br>Standard dummy text ever since tunknown printer. 
         </p>
-
+        -->
         <div class="info-autor">
             {% if chave.imagem == '' %}
-            <img src="{% static 'imagens/pagblog/user-circle.svg' %}" alt="{{ chave.autor }}">
+            <img src="{% static 'imagens/pagblog/user.svg' %}" alt="">
             {% else %}
-            <img src="{{ chave.imagem.url }}" alt="">
+            <img src="{{ chave.imagem.url }}">
             {% endif %}
             <div class="container-autor-data">
-                <p>por <span>{{ chave.autor }}</span></p>
+                <p>Por: <span>{{ chave.autor }}</span></p>
                 <p>{{ chave.criacaodata }}</p>
             </div>
-            <p class="desc">{{ chave.biografia }}</p>
+            <p class="desc"> {{ chave.biografia }} </p>
 
             <div class="redes">
                 <a href="#"><img class="face" src="{% static 'imagens/pagblog/icon-face.svg' %}" alt=""></a>

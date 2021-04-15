@@ -7,55 +7,77 @@
 /* ============ CAIXA ESQUERDA =========== */
 
 .caixa-esquerda-sobre{
-    width: 50%;
-    position: relative;
+    width: 55%;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .titulo-sobre{
-    position: relative;
-    top: 136px;
-    left: 121px;
+    margin-bottom: 22px;
     font-size: 48px;
     font-weight: 700;
     color: #164194;
+
+    text-align: left;
+
+
+    position: relative;
 }
 
-.texto-sobre{
-    position: relative;
-    top: 155px;
-    left: 121px;
-    font-size: 28px;
-    font-weight: 300;
-    margin-right: 100px;
-    text-align: justify;
+.titulo-sobre:after{
+    position: absolute;
+    content: "";
+
+    left: 0;
+    bottom: 0;  
 
     
+
+    width: 10%;
+    height: 4px;
+    background: #0095DB;
+}
+
+.texto-sobre{ 
+    font-size: 28px;
+    font-weight: 300;
+
+    text-align: justify;
+
+    margin-bottom: 26px;
 }
 
 .pergunta-visitante{
-    position: relative;
+
     font-size: 24px;
     font-weight: 500;
-    left: 121px;
-    top: 190px;
+    margin-bottom: 16px;
 }
 
-.container-voto .voting{
-    position: relative;
-    left: 180px;
-    top: 160px;
+.container-voto{
+    width: fit-content;
 }
 
 .input{
-    position: relative;
+
+    border: 1px solid red;
+    position: absolute;
     border: none;
     background: none;
+    
     font-size: 20px;
     font-weight: 700;
+
+    width: 3%;
+
+
+    
     color: white;
-    right: 110px;
-    top: 19px;
-    width: 60px;
+
+    margin-top: 0.9%;
+    margin-left: -2%;
 }
 
 .botao-like{
@@ -63,8 +85,7 @@
     height: 54px;
     border-radius: 15px;
     border: none;
-    top: 50px;
-    right: 60px;
+    
 }
 
 .img-botao-like{
@@ -83,13 +104,97 @@ button:focus {
 /* ========= COUNTEINER DIRETA =========== */
 
 .caixa-direita-sobre{
-    width: 50%;
-    position: relative;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ilustracao-sobre {
+    width: 90%;
+    transform: translateX(-40px);
 }
 
 
-.ilustracao-sobre{
-    position: relative;
-    top: 156px;
+
+
+
+
+@media (max-width: 1510px) {
+
+    .input{
+        margin-left: -3%;
+        margin-top: 1%;
+    }
+    
+    
+}
+
+@media (max-width: 1460px) {
+    .input{
+        margin-left: -3%;
+        margin-top: 1%;
+    }
+    
+}
+
+@media (max-width: 1260px) {
+    .input{
+        margin-left: -3%;
+        margin-top: 1%;
+    }
+    
+}
+
+@media (max-width: 1020px) {
+    .texto-sobre {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 920px) {
+    #sobre{
+       flex-direction: column;
+    }
+    .caixa-esquerda-sobre, .caixa-direita-sobre {
+        width: 100%;
+        padding: 0;
+        margin: 0 16px;
+    }
+    .ilustracao-sobre {
+        width: 60%;
+        transform: translateX(40px);
+    }
+    .texto-sobre {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .input{
+        margin-left: -5%;
+        margin-top: 1.5%;
+    }
+
+    @media (max-width: 425px) {
+        .titulo-sobre{
+            margin-left: 5%;
+        }
+
+        .pergunta-visitante{
+
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+        
+        .input{
+            margin-top: 4%;
+            margin-left: -10%;
+            width: 10%;
+        }
+
+        
+    }
+
     
 }

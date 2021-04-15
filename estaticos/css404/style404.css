@@ -50,7 +50,7 @@ body{
 }
 
 
-/* ============== CONTAINER 1 ============== */
+/* ============== CONTAINER 2 ============== */
 .container2{
 
     width: 100%;
@@ -59,9 +59,18 @@ body{
 }
 
 .container2 .bg{
-    position: absolute;
+
     width: 878.64px;
     height: 480px;
-    left: 650px;
 
+    margin-left: 40%;
+
+}
+
+
+@media (max-width: 950px) {
+    .container0{
+        display: flex;
+        flex-direction: column;
+    }
 }

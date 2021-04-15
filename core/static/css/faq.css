@@ -1,39 +1,51 @@
 #faq{
     width: 100%;
     height: 100vh;
-    position: relative;
-    display: flex;
 }
 
-.container-faq h1{
+
+h1{
+
     font-size: 48px;
     font-weight: 700;
-    position: relative;
-    top: 53px;
 
     height: fit-content;
+    width: 100%;
+    
     text-align: center;
+
+    margin-top: 2%;
+
 
     color: #164194;
 }
 
-.container-faq span{
+span{
     font-weight: 300;
 }
+
+
+.container-generico-faq{
+
+    display: flex;
+
+    width: 100%;
+    height: 80%;
+}
+
+.container-faq{
+    width: 40%;
+    
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
 
 section .acordeao{
     display: flex;
     align-items: center;
     justify-content: center;
 
-}
-
-.container{
-    width: 100%;
-    
-    margin-top: 150px;
-    margin-left: 100px;
-    margin-right: 750px;
 }
 
 .accordion-link{
@@ -88,8 +100,6 @@ section .acordeao{
 .answer::before{
     content: "";
 
-    
-
     position: absolute;
     top: 50%;
     left: 0;
@@ -111,7 +121,27 @@ section .acordeao{
 
 
 .bg-faq{    
-    position: absolute;
-    top: 200px;
-    left: 870px;
+
+    height: min-content;
+    width: 40%;
+
+    margin-top: 5%;
+    margin-left: 10%;
+
+
+}
+
+
+@media (max-width: 425px) {
+    .container-generico-faq{
+        flex-direction: column;
+    }
+
+    .container-faq{
+        width: 80%;
+    }
+
+    .bg-faq{
+        width: 70%;
+    }
 }

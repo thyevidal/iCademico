@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import *
 from django.db.models import Max
 
+
 # Create your views here.
 def index(request):
     context = {
@@ -18,3 +19,4 @@ def blog(request, id_blog):
         'chave': get_object_or_404(Blog, pk=id_blog),
     }
     return render(request, 'blog.html', post  )
+

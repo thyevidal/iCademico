@@ -7,6 +7,7 @@
 
 
 body{
+    
     font-family: 'Montserrat', sans-serif;
     background-color: #F7F4EA;
     scroll-behavior: smooth;
@@ -24,9 +25,13 @@ a{
 }
 
 #botao-topo{
+    
+    display: flex;
+    
     position: fixed;
-    right: 21px;
-    bottom: 10px;
+    bottom: 0;
+    left: 0;
+    justify-content: right;
 }
 
 @media (max-width: 801px){

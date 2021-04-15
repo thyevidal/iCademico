@@ -1,83 +1,151 @@
-#inicio{
-
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+#inicio {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-
 
 /* =========== CONTEÚDOS DA DIREITA ============ */
 
-.caixadireita{
-    width: 50%;
-    height: 99vh;
-    position: relative;
+.caixadireita {
+  width: 50%;
+  height: 99vh;
 }
 
-.mulher-bg{
-    position: absolute;
-    height: 100vh;
-    width: 130vh;
-    right: 1px;
-
+.mulher-bg {
+  position: absolute;
+  height: 100vh;
+  width: 130vh;
+  right: 1px;
+  z-index: -1;
 }
-
 
 /* ---------------------------------------------------------- */
 
 /* ========== CONTEÚDOS DA ESQUERDA ================ */
 
-.caixaesquerda{
-    width: 50%;
-    position: relative;
-    left: 30px;
+.caixaesquerda {
+  width: 50%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 64px;
 }
 
-
-.logocolorida{
-    position: absolute;
-    width: 30.625em;
-    height: 6.875em;
-    left: 5.25em;
-    top: 18.0625em;
+.logocolorida {
+  width: 70%;
 }
 
-.slogan{
-    position: absolute;
-    width: 440px;
-    height: 100px;
-    left: 80px;
-    top: 409px;
+.slogan {
+  width: 100%;
+  height: 100px;
 
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 44px;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  margin: 16px 0;
 
-    color: #242424;
+  color: #242424;
 }
 
 .redessociais {
-    position: absolute;
-    width: 209px;
-    top: 640px;
-    left: 84px;
-    display: flex;
+  width: 209px;
 
+  display: flex;
+  
+  transform: translateY(140px);
 }
 
-.logo-rede:first-child{
-    margin-left: 0;
-
+.logo-rede:first-child {
+  margin-left: 0;
 }
 
-.logo-rede{
-    display: inline-block;
-    margin-left: 32px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.logo-rede {
+  display: inline-block;
+  margin-left: 32px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 
+@media (max-width: 1461px) {
+  .slogan{
+    font-size: 28px;
+  }
+  
+}
+
+@media (max-width: 1284px) {
+    .mulher-bg {
+        right: -60px;
+        height: 101vh;
+        width: 100vh;  
+    }
+}
+
+@media (max-width: 1035px) {
+    .mulher-bg {
+        display: none;
+
+    }
+}
+
+@media (max-width: 425px){
+  
+  #inicio{
+    height: 70vh;
+  }
+
+  .logocolorida{
+    width: 200%;
+  }
+
+  .slogan{
+    font-size: 18px;
+    
+    width: 300%;
+  }
+
+  .mulher-bg-mobile{
+
+    margin-top: 70%;
+    height: 50%;
+
+  }
+
+  .redessociais{
+
+    margin-bottom: 250%;
+    width: 150%;
+  }
+  
+
+  @media (max-width: 375px) {
+    
+    .logocolorida{
+      width: 300%;
+      
+      margin-top: -300%;
+    }
+    
+    .redessociais{
+      display: none;
+    }
+
+    .slogan{
+      font-size: 16px;
+      
+      width: 400%;
+    }
+  }
+
+  @media (max-width: 325px){
+    .slogan{
+
+      width: 500%;
+      font-size: 12px;
+    }
+  }
+}
