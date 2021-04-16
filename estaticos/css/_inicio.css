@@ -20,6 +20,10 @@
   z-index: -1;
 }
 
+.mulher-bg-mobile{
+  display: none;
+}
+
 /* ---------------------------------------------------------- */
 
 /* ========== CONTEÚDOS DA ESQUERDA ================ */
@@ -74,6 +78,7 @@
   .slogan{
     font-size: 28px;
   }
+
   
 }
 
@@ -85,12 +90,27 @@
     }
 }
 
-@media (max-width: 1035px) {
-    .mulher-bg {
-        display: none;
+@media (max-width: 874px) {
+  .mulher-bg-mobile{
+    display: block;
+  }
 
+  .mulher-bg{
+    display: none;
+  }
+
+  @media (max-width: 628px) {
+    .mulher-bg-mobile{
+
+      margin-top: 70%;
+      height: 50%;
+  
     }
+
+    
+  }
 }
+
 
 @media (max-width: 425px){
   
@@ -107,6 +127,8 @@
     
     width: 300%;
   }
+
+
 
   .mulher-bg-mobile{
 

@@ -26,10 +26,8 @@ Tecnologias:
 	Python 3
 	Django 3.2
 
-Para rodar a instalção, baixe e instale o Python (https://www.python.org/downloads/), abra uma janela de comando na pasta iCademico e digite:
-	pip install -r requeriments.txt
-Será instalado o Django e a biblioteca Pillow, após (a partir da pasta iCademico) digite:
-	.\myenve\Scripts\activate
+Para rodar a aplicação, você deve ter o Python e Django atualizado, para isso siga os tutoriais em: https://docs.djangoproject.com/pt-br/3.0/intro/install/
+Após a intalação, clone o diretório do github (https://github.com/Hugocorreaa/iCademico.git), abra uma janela de comandos na pasta com o arquivo manage.py e digite o seguinte comando:
 	python manage.py runserver
 Feito isso o servidor local deve ter sido inicializado, abra o seu navegador e cole: <http://127.0.0.1:8000/>. Este é o endereço padrão do projeto.
 	

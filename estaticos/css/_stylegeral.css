@@ -30,8 +30,9 @@ a{
     
     position: fixed;
     bottom: 0;
-    left: 0;
-    justify-content: right;
+    right: 0;
+    
+
 }
 
 @media (max-width: 801px){

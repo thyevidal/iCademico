@@ -13,22 +13,29 @@ header{
 
 
 #menudesktop{
+
     width: 100%;
     height: 78px;
     display: flex;
 }
 
 .textomenu{
-    position: absolute;
-    left: 175px;
-    top: 31px;
+
+    width: 100%;
+
+    margin-top: 10%;
+    margin-left: 6%;
+
     list-style: none;
 
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
+    
     line-height: 44px;
+
+
 }
 .textomenu ul{
     display: flex;
@@ -39,6 +46,10 @@ header{
     color: #80A1D4;
     position: relative;
     display: inline-block;
+
+    padding-left: 20px;
+    
+
     
 }
 
@@ -67,4 +78,13 @@ header{
     left: 20px;
     width: 50%;
     margin-top: 2px;
+}
+
+@media (max-width: 422px) {
+    .textomenu{
+        font-size: 20px;
+        
+    }
+
+    
 }

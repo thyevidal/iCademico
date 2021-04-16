@@ -188,7 +188,6 @@ outline: none;
 }
 
 .perfil-autor01{
-    border: 1px solid blue;
 
     display: flex;
 
@@ -223,8 +222,8 @@ outline: none;
     width: 100%;
     height: fit-content;
 
-    margin-left: -115%;
-    margin-top: 37%;
+    margin-left: -105%;
+    margin-top: 46%;
 
 
 
@@ -242,7 +241,12 @@ outline: none;
     padding-bottom: 3%;
 }
 
+@media (max-width: 1210px) {
+    .perfil-autor01{
 
+    }
+    
+}
 
 
 @media (max-width: 920px){
